@@ -43,6 +43,21 @@ button:focus, button:active {
     outline: none;
 }
 
+body::-webkit-scrollbar {
+    background: inherit;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-header);
+    border: 1px solid var(--bg-header);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--link-color);
+}
+
 .App {
     display: flex;
     flex-direction: column;

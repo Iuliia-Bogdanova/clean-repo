@@ -1,8 +1,8 @@
 import "./_base.scss";
 
+import phone from "../../assets/icons/phone-call.svg";
 import mail from "../../assets/icons/mail.svg";
 import ig from "../../assets/icons/instagram.svg";
-import phone from "../../assets/icons/phone-call.svg";
 import tg from "../../assets/icons/tg.svg";
 
 function App() {
