@@ -1,10 +1,53 @@
-import './_normalize.css';
-import './_base.css';
-import './_fonts.css';
+import "./_base.css";
+
+// import bg from "./"
 
 function App() {
   return (
     <div className="App">
+      <nav className="nav">
+        <div className="container">
+          <div className="nav-row">
+            <a href="./index.html" className="logo">
+              <strong>Happy Cats</strong>
+            </a>
+
+            <button className="dark-mode-btn">
+              <img
+                src="./assets/icons/sun.svg"
+                alt="Light mode"
+                className="dark-mode-btn__icon"
+              ></img>
+              <img
+                src="./assets/icons/moon.svg"
+                alt="Dark mode"
+                className="dark-mode-btn__icon"
+              ></img>
+            </button>
+
+            <ul className="nav-list">
+              <li className="nav-list__item">
+                <a
+                  href="./index.html"
+                  className="nav-list__link nav-list__link--active"
+                >
+                  Projects
+                </a>
+              </li>
+              <li className="nav-list__item">
+                <a href="./skills.html" className="nav-list__link">
+                  Skills
+                </a>
+              </li>
+              <li className="nav-list__item">
+                <a href="./contacts.html" className="nav-list__link">
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <h1>Happy Cats</h1>
       <h2>
         В кошачьем хостеле жизнь котиков просто сказочная! Каждый день они
