@@ -10,6 +10,7 @@
 
 a, a:link, a:visited  {
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover  {
@@ -42,22 +43,14 @@ button:focus, button:active {
     outline: none;
 }
 
-
-body {
+.App {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 
-    background-image: url(../../assets/img/bg-desk.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* background-attachment: fixed; */
-    background-size: cover;
-
     font-family: 'Neucha', cursive;
     font-weight: 400;
     font-size: 28px;
-    padding: 20px;
 
     /* font-family: 'Bad Script', cursive;
     font-weight: 400;
@@ -65,11 +58,104 @@ body {
     padding: 20px; */
 }
 
-h1 {
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1220px;
+}
+
+.nav {
+    /* flex: 0 0 auto; */
+    padding: 20px 0;
+
+    background-color: var(--bg-header);
+    color: var(--font-color-header);
+}
+
+.nav-row,
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
     font-family: 'Pimpaw Cat', sans-serif;
-    font-weight: 400;
-    color: rgb(43, 83, 83);
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    row-gap: 10px;
+    text-transform: uppercase;
+}
+
+.nav-list__item,
+.social__item {
+    transition: all .2s ease-in;
+}
+
+.nav-list__item:hover,
+.social__item:hover {
+    transform: scale(.9);
+    opacity: 0.8;
+}
+
+.nav-list__link--active {
+    position: relative;
+}
+
+.nav-list__link--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--link-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    background-image: url(../../assets/img/bg-desk.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.footer {
+    /* flex: 0 0 auto; */
+    margin-top: auto;
+    padding: 20px 0;
+
+    background-color: var(--bg-header);
+    color: var(--font-color-header);
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
 }
 
 h2 {
