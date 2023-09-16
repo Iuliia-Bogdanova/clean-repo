@@ -1,4 +1,4 @@
-import "./_base.css";
+import "./_base.scss";
 
 import mail from "../../assets/icons/mail.svg";
 import ig from "../../assets/icons/instagram.svg";
@@ -49,7 +49,7 @@ function App() {
 
       <main className="main">
         <h1>Happy Cats</h1>
-        {/* <h2>
+        <h2>
           В кошачьем хостеле жизнь котиков просто сказочная! Каждый день они
           наслаждаются комфортом и уютом этого места. Коты здесь получают
           отличный сервис - у них есть свои мягкие кроватки, игрушки и корм,
@@ -82,7 +82,7 @@ function App() {
         <p>
           Все это делает их пребывание в хостеле незабываемым и идеальным для
           маленьких хвостатых друзей.
-        </p> */}
+        </p>
       </main>
 
       <footer className="footer">
