@@ -6,27 +6,14 @@ const Header = () => {
             <nav className="nav">
             <div className="container">
                 <div className="nav-row">
-                {/* <button className="dark-mode-btn">
-                <img
-                    src="./assets/icons/sun.svg"
-                    alt="Light mode"
-                    className="dark-mode-btn__icon"
-                ></img>
-                <img
-                    src="./assets/icons/moon.svg"
-                    alt="Dark mode"
-                    className="dark-mode-btn__icon"
-                ></img>
-                </button> */}
-
                 <ul className="nav-list">
                     <li className="nav-list__item">
-                    <a href="" className="nav-list__link nav-list__link--active">
+                    <a href="" className="nav-list__link nav-list__link">
                         о нас
                     </a>
                     </li>
                     <li className="nav-list__item">
-                    <a href="" className="nav-list__link">
+                    <a href="" className="nav-list__link--active">
                         галерея котиков
                     </a>
                     </li>
