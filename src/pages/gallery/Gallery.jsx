@@ -15,10 +15,9 @@ const Gallery = () => {
             </div>
 
             <div className="actions">
-              {/* <IconButton direction="left" />
-              <IconButton direction="right" /> */}
-              <div className="prev"></div>
-              <div className="next"></div>
+              <IconButton direction="left" />
+              <IconButton direction="right" />
+      
             </div>
           </div>
         </div>

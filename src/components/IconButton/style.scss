@@ -8,24 +8,17 @@
     cursor: pointer;
 }
 
-.icon-button.left {
-    background-image: url(../../assets/icons/pets-left.svg);
-    width: 40px;
-    height: 40px;
-    margin-bottom: 40px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    cursor: pointer;
-    
+.icon-button.left,
+.icon-button.left.disable {
+    background-image: url(../../assets/icons/pets-left.svg);    
 }
 
 .icon-button.left:hover {
     background-image: url(../../assets/icons/pets_active-left.svg);
 }
 
-.icon-button.right
-.icon-button.right.disabled {
+.icon-button.right,
+.icon-button.right.disable {
     background-image: url(../../assets/icons/pets-right.svg);
 }
 
