@@ -1,5 +1,5 @@
 import IconButton from "../../components/IconButton/IconButton";
-import style from"./style.scss";
+import "./style.scss";
 
 const Gallery = () => {
     return (
@@ -16,7 +16,7 @@ const Gallery = () => {
 
             <div className="actions">
               {/* <IconButton direction="left" />
-              <IconButton direction="right" disable/> */}
+              <IconButton direction="right" /> */}
               <div className="prev"></div>
               <div className="next"></div>
             </div>
