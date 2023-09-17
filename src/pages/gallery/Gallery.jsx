@@ -1,22 +1,28 @@
-import style from"./style.module.scss";
+import IconButton from "../../components/IconButton/IconButton";
+import style from"./style.scss";
 
 const Gallery = () => {
     return (
-        <main className={style.main}>
-            <div className="container">
-                <div className={style.box}>
-                    <h1 className="logo logo-title">
-                    отзывы питомцев
-                    <br />
-                    <span className="logo">Happy Cats</span>
-                    </h1>
-                    <div className={style.actions}>
-                        <div className={style.prev}></div>
-                        <div className={style.next}></div>
-                    </div>
-                </div>
+      <main className="main">
+        <div className="container">
+          <div className="box">
+            <div className="title">
+              <h1 className="logo logo-title">
+                отзывы питомцев
+                <br />
+                <span className="logo">Happy Cats</span>
+              </h1>
             </div>
-        </main>
+
+            <div className="actions">
+              {/* <IconButton direction="left" />
+              <IconButton direction="right" disable/> */}
+              <div className="prev"></div>
+              <div className="next"></div>
+            </div>
+          </div>
+        </div>
+      </main>
     );
 }
 
