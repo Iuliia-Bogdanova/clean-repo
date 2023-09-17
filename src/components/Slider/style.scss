@@ -1,0 +1,27 @@
+.slider {
+    display: flex;
+    gap: 20px;
+
+    border: 1px solid green;
+}
+
+.slide {
+    flex: 1;
+    flex-grow: 1;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    border: 1px solid red;
+}
+
+.slide.active {
+    flex-grow: 3;
+}
+
+.slide img {
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    object-position: center -1px;
+}
