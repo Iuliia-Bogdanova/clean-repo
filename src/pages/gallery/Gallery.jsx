@@ -1,4 +1,3 @@
-import IconButton from "../../components/IconButton/IconButton";
 import Slider from "../../components/Slider/Slider";
 
 import photo_1 from "../../assets/photo/photo_1.jpg";
@@ -14,6 +13,59 @@ import photo_10 from "../../assets/photo/photo_10.jpg";
 
 import "./style.scss";
 
+// const sliderData = [
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_1,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_2,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_3,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_4,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_5,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_6,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_7,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_8,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_9,
+//   },
+//   {
+//     name: "",
+//     text: "",
+//     img: photo_10,
+//   },
+// ];
+
 const Gallery = () => {
     return (
       <main className="main">
@@ -26,12 +78,9 @@ const Gallery = () => {
                 <span className="logo">Happy Cats</span>
               </h1>
             </div>
-            <div className="actions">
-              <IconButton direction="left" />
-              <IconButton direction="right" />
-            </div>
           </div>
 
+          {/* <Slider data={sliderData} /> */}
             <Slider>
               <img src={photo_1} alt="Slide 1" />
               <img src={photo_2} alt="Slide 2" />
@@ -44,6 +93,7 @@ const Gallery = () => {
               <img src={photo_9} alt="Slide 9" />
               <img src={photo_10} alt="Slide 10" />
             </Slider>
+
         </div>
       </main>
     );

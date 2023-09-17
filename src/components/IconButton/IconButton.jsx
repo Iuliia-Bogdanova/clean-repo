@@ -1,6 +1,6 @@
 import "./style.scss";
 
-const IconButton = ({ 
+export const IconButton = ({ 
     direction, 
     disable,
     onClick
@@ -15,5 +15,3 @@ const IconButton = ({
         <div className={cls} onClick={onClick} />
     );
 }
-
-export default IconButton;

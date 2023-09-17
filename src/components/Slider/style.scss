@@ -1,22 +1,41 @@
+.slider-wrap {
+    position: relative;
+    top: -30px;
+}
+
+.slider-actions {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 60px;
+    top: -60px;
+}
+
 .slider {
     display: flex;
-    gap: 20px;
+    gap: 4px;
 
-    border: 1px solid green;
+    // border: 1px solid green;
 }
 
 .slide {
     flex: 1;
     flex-grow: 1;
+    width: 60%;
     height: 400px;
-    border-radius: 10px;
     overflow: hidden;
+    border: 1px solid var(--bg);
+    border-radius: 10px;
 
-    border: 1px solid red;
+    transition: .3s;
+
+    // border: 1px solid red;
 }
 
 .slide.active {
-    flex-grow: 3;
+    flex-grow: 10;
+    box-shadow: 2px 4px 8px var(--font-color);
 }
 
 .slide img {
