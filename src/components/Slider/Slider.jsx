@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { IconButton } from '../IconButton/IconButton';
 import './style.scss';
 
-const Slider = ({ children }) => {
+const Slider = ({ data }) => {
     const [activeId, setActiveId] = useState(0)
 
 // перемотка слайдов только вручную
@@ -32,7 +32,7 @@ const prev = () => {
     };
 
     const next = () => {
-    if (activeId < children.length - 1) {
+    if (activeId < data.length - 1) {
         setActiveId(activeId + 1);
     } else {
         setActiveId(0); 
@@ -60,15 +60,20 @@ const prev = () => {
             <IconButton
                 direction="right"
                 onClick={next}
-                disable={activeId === children.length}
+                disable={activeId === data.length}
             />
             </div>
             <div className="slider">
-            {children.map((slide, idx) => (
-                <div className={`slide${idx === activeId ? " active" : ""}`}>
-                {slide}
-                </div>
-            ))}
+                {data.map((slide, idx) => (
+                    <div 
+                    key={idx} className={`slide${idx === activeId ? " active" : ""}`}>
+                        <div className="slide__info">
+                            <div className="slide__name">{slide.name}</div>
+                            <div className="slide__text">{slide.text}</div>
+                        </div>
+                        <img src={slide.img} alt={`Slide &{idx+1}`} />
+                    </div>
+                ))}
             </div>
         </div>
     );

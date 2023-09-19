@@ -20,13 +20,15 @@
 }
 
 .slide {
+    height: 30vw; 
+    max-height: 600px;
+    position: relative;
     flex: 1;
     flex-grow: 1;
-    width: 60%;
-    height: 400px;
     overflow: hidden;
     border: 1px solid var(--bg);
     border-radius: 10px;
+    box-shadow: 1px 2px 4px var(--font-color);
 
     transition: .5s;
 
@@ -43,4 +45,31 @@
     height: 101%;
     object-fit: cover;
     object-position: center -1px;
+}
+
+.slide__info {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    white-space: nowrap;
+    opacity: 0;
+
+    color: var(--font-color-accent);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.slide.active .slide__info {
+    opacity: 1;
+}
+
+.slide__name {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.slide__text {
+    font-size: 24px;
+    text-transform: lowercase;
 }
