@@ -1,0 +1,52 @@
+[
+    {
+        "name": "нюша",
+        "text": "красотка",
+        "img": "./assets/photo/photo_1.jpg"
+    },
+    {
+        "name": "мистер кот денис",
+        "text": "зайка",
+        "img": "./assets/photo/photo_2.jpg"
+    },
+    {
+        "name": "гранпи",
+        "text": "пухляш",
+        "img": "./assets/photo/photo_3.jpg"
+    },
+    {
+        "name": "люся веня",
+        "text": "спять",
+        "img": "./assets/photo/photo_4.jpg"
+    },
+    {
+        "name": "котойта котек",
+        "text": "лежить",
+        "img": "./assets/photo/photo_5.jpg"
+    },
+    {
+        "name": "суслинька",
+        "text": "с игрушечками",
+        "img": "./assets/photo/photo_6.jpg"
+    },
+    {
+        "name": "снова люся веня",
+        "text": "снова спять",
+        "img": "./assets/photo/photo_7.jpg"
+    },
+    {
+        "name": "суслинька",
+        "text": "в уединении",
+        "img": "./assets/photo/photo_8.jpg"
+    },
+    {
+        "name": "люся лотя",
+        "text": "тоже спять",
+        "img": "./assets/photo/photo_9.jpg"
+    },
+    {
+        "name": "суслинька",
+        "text": "самый прекрасный в мире котинька",
+        "img": "./assets/photo/photo_10.jpg"
+    }
+]

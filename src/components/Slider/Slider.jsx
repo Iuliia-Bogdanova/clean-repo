@@ -64,16 +64,18 @@ const prev = () => {
             />
             </div>
             <div className="slider">
-                {data.map((slide, idx) => (
-                    <div 
-                    key={idx} className={`slide${idx === activeId ? " active" : ""}`}>
-                        <div className="slide__info">
-                            <div className="slide__name">{slide.name}</div>
-                            <div className="slide__text">{slide.text}</div>
-                        </div>
-                        <img src={slide.img} alt={`Slide &{idx+1}`} />
-                    </div>
-                ))}
+            {data.map((slide, idx) => (
+                <div
+                key={idx}
+                className={`slide${idx === activeId ? " active" : ""}`}
+                >
+                <div className="slide__info">
+                    <div className="slide__name">{slide.name}</div>
+                    <div className="slide__text">{slide.text}</div>
+                </div>
+                <img src={slide.img} alt={`Slide ${idx + 1}`} />
+                </div>
+            ))}
             </div>
         </div>
     );
