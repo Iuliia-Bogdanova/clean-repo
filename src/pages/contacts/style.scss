@@ -26,3 +26,9 @@
 .contacts-list__text {
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .contacts-list {
+        margin-bottom: 250px;
+    }
+}
