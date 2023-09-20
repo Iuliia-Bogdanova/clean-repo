@@ -64,3 +64,17 @@
         font-size: 32px;
     }
 }
+
+@media (max-width: 410px) {
+    .nav-row {
+        flex-direction: column-reverse;
+    }
+    .logo {
+        margin-left: auto;
+    }
+    .nav-list {
+        align-items:flex-start;
+        row-gap: 6px;
+        margin-right: auto;
+    }
+}

@@ -46,3 +46,16 @@
         font-size: 32px;
     }
 }
+
+@media (max-width: 410px) {
+    .about-text {
+        margin-bottom: 250px;
+    }
+    .logo-title {
+        font-size: 30px;
+        margin: 0;
+    }
+    .about-text p {
+        padding: 4px 0;
+    }
+}

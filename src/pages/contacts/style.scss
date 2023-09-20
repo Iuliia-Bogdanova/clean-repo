@@ -32,3 +32,15 @@
         margin-bottom: 250px;
     }
 }
+
+@media (max-width: 410px) {
+    .contacts-list {
+        margin-bottom: 180px;
+    }
+    .grid-item {
+        padding: 6px;
+    }
+    .grid-item:last-child {
+        padding-top: 10px;
+    }
+}
