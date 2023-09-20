@@ -38,11 +38,18 @@
     width: 50px;
     height: 50px;
     margin-top: 0px;
-    background-image: url(../../assets/icons/cat.svg);
+    background-image: url(../../assets/icons/cat_active.svg);
 }
 
 .play-button.active {
-    background-image: url(../../assets/icons/cat_.active.svg);
+    background-image: url(../../assets/icons/cat.svg);
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
 }
 
 .icon-button.left:hover,
@@ -50,4 +57,17 @@
 .play-button:hover {
     transform: scale(.9);
     opacity: 0.8;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: var(--bg-header);
+}
+
+.indicator.active,
+.indicator:hover {
+    background-color: var(--font-color);
 }
