@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IconButton } from '../IconButton/IconButton';
+import { IconButton } from '../Buttons/IconButtons';
 import './style.scss';
 
 const Slider = ({ data }) => {
@@ -57,6 +57,9 @@ const prev = () => {
                 onClick={prev}
                 disable={activeId === 0}
             />
+            <div className="play-button">
+                
+            </div>
             <IconButton
                 direction="right"
                 onClick={next}
