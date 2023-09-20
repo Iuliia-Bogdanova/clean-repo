@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer__wrapper">
-                <h2 className="logo">Happy Cats</h2>
+                <h2 className="logo logo-footer">Happy Cats</h2>
                 <div className="footer-list">
                     <ul className="social">
                     <li className="social__item">

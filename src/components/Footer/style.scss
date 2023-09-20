@@ -44,3 +44,16 @@
         height: 30px;
     }
 }
+
+@media (max-width: 520px) {
+    .footer-list {
+        margin: 0 auto;
+    }
+    .logo-footer {
+        display: none;
+    }
+    .social__item {
+        width: 26px;
+        height: 26px;
+    }
+}

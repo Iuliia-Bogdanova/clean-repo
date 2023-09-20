@@ -76,3 +76,16 @@
         top: 14px;
     }
 }
+
+@media (max-width: 520px) {
+    .slide__info {
+        left: 10px;
+        top: 10px;
+    }
+    .slide__name {
+        font-size: 24px;
+    }
+    .slide__text {
+        font-size: 18px;
+    }
+}

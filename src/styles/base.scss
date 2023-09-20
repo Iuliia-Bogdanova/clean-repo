@@ -85,3 +85,9 @@ body::-webkit-scrollbar-corner {
         font-size: 24px;
     }
 }
+
+@media (max-width: 520px) {
+    .App {
+        font-size: 22px;
+    }
+}

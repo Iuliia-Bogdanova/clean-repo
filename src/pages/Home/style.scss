@@ -37,3 +37,12 @@
         padding: 6px 0;
     }
 }
+
+@media (max-width: 520px) {
+    .about-text {
+        margin-bottom: 300px;
+    }
+    .logo-title {
+        font-size: 32px;
+    }
+}

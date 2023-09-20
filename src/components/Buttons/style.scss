@@ -81,9 +81,26 @@
         width: 40px;
         height: 40px;
     }
-.indicator {
-    width: 16px;
-    height: 16px;
+    .indicator {
+        width: 16px;
+        height: 16px;
+    }
 }
-    
+
+@media (max-width: 520px) {
+    .icon-button {
+        width: 24px;
+        height: 24px;
+    }
+    .play-button {
+        width: 30px;
+        height: 30px;
+    }
+    .slide-indicators {
+        gap: 14px;
+    }
+    .indicator {
+        width: 14px;
+        height: 14px;
+    }
 }

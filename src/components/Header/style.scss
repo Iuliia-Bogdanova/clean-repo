@@ -55,3 +55,12 @@
         font-size: 40px;
     }
 }
+
+@media (max-width: 520px) {
+    .header {
+        padding: 14px 0;
+    }
+    .logo {
+        font-size: 32px;
+    }
+}
