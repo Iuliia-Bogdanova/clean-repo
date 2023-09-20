@@ -104,3 +104,20 @@
         height: 14px;
     }
 }
+
+@media (max-width: 410px) {
+    .icon-button {
+        width: 22px;
+        height: 22px;
+    }
+    .play-button {
+        width: 28px;
+        height: 28px;
+    }
+    .slide-indicators {
+        gap: 10px;
+    }
+    .indicator {
+        margin: 0 3px;
+    }
+}
