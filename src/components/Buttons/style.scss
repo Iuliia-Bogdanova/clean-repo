@@ -71,3 +71,19 @@
 .indicator:hover {
     background-color: var(--font-color);
 }
+
+@media (max-width: 768px) {
+    .icon-button {
+        width: 30px;
+        height: 30px;
+    }
+    .play-button {
+        width: 40px;
+        height: 40px;
+    }
+.indicator {
+    width: 16px;
+    height: 16px;
+}
+    
+}

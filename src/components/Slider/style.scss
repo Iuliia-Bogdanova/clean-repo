@@ -48,10 +48,7 @@
     left: 20px;
     top: 20px;
     opacity: 0;
-
     color: var(--bg);
-    // backdrop-filter: blur(10px);
-    // border-radius: 10px;
     transition: .5s;
 }
 
@@ -67,4 +64,15 @@
 .slide__text {
     font-size: 24px;
     text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+    .slider-actions {
+        gap: 40px;
+        top: -40px;
+    }
+    .slide__info {
+        left: 14px;
+        top: 14px;
+    }
 }
