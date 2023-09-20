@@ -1,6 +1,6 @@
 import "./style.scss";
 
-const About = () => {
+const Home = () => {
     return (
         <main className="main">
             <article className="about">
@@ -38,4 +38,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default Home;
