@@ -15,8 +15,6 @@
 .slider {
     display: flex;
     gap: 4px;
-
-    // border: 1px solid green;
 }
 
 .slide {
@@ -31,8 +29,6 @@
     box-shadow: 1px 2px 4px var(--font-color);
 
     transition: .5s;
-
-    // border: 1px solid red;
 }
 
 .slide.active {
@@ -55,8 +51,8 @@
     opacity: 0;
 
     color: var(--font-color-accent);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
+    // backdrop-filter: blur(10px);
+    // border-radius: 10px;
     transition: .5s;
 }
 
