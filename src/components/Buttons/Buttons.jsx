@@ -30,3 +30,17 @@ export const PlayButton = ({
         <div className={cl} onClick={onClick} />
     );
 }
+
+export const Indicator = ({
+    active,
+    onClick,
+    index
+}) => {
+    let clN = "indicator";
+
+    if (active === 'active') clN += ' active';
+    
+    return (
+    <div className={clN} onClick={() => onClick(index)} />
+    );
+}

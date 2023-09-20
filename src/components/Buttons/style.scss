@@ -45,18 +45,18 @@
     background-image: url(../../assets/icons/cat.svg);
 }
 
-.slide-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 20px;
-}
-
 .icon-button.left:hover,
 .icon-button.right:hover,
 .play-button:hover {
     transform: scale(.9);
     opacity: 0.8;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
 }
 
 .indicator {
