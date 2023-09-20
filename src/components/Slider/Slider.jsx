@@ -1,29 +1,10 @@
 import { useState, useEffect } from 'react';
-import { IconButton } from '../Buttons/IconButtons';
-import { PlayButton } from '../Buttons/IconButtons';
+import { IconButton, PlayButton } from "../Buttons/IconButtons";
 import './style.scss';
 
 const Slider = ({ data }) => {
-    const [activeId, setActiveId] = useState(0)
-
-// перемотка слайдов только вручную
-// const prev = () => {
-//     setActiveId(activeId => {
-//         if (activeId > 0) {
-//             return activeId - 1
-//         }
-//         return activeId
-//     })
-// }
-
-// const next = () => {
-//     setActiveId((activeId) => {
-//         if (activeId < children.length - 1) {
-//         return activeId + 1;
-//         }
-//         return activeId;
-//     });
-// };
+    const [activeId, setActiveId] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
 
 // автопроигрывание
 const prev = () => {
@@ -42,45 +23,59 @@ const prev = () => {
 
     useEffect(() => {
     const timer = setInterval(() => {
-        next(); 
+        if (isPlaying) {
+            next(); 
+        }
     }, 5000); 
 
     return () => {
         clearTimeout(timer); 
     };
-}, [activeId]);
+}, [activeId, isPlaying]);
+
+const togglePlaying = () => {
+    setIsPlaying(!isPlaying);
+};
 
     return (
         <div className="slider-wrap">
             <div className="slider-actions">
-            <IconButton
-                direction="left"
-                onClick={prev}
-                disable={activeId === 0}
-            />
-            
-            <PlayButton></PlayButton>
-            
-            <IconButton
-                direction="right"
-                onClick={next}
-                disable={activeId === data.length - 1}
-            />
+                <IconButton
+                    direction="left"
+                    onClick={prev}
+                    disable={activeId === 0}
+                />
+
+                <PlayButton
+                    active={isPlaying ? "active" : ""}
+                    disable={false}
+                    onClick={togglePlaying}
+                />
+
+                <IconButton
+                    direction="right"
+                    onClick={next}
+                    disable={activeId === data.length - 1}
+                />
             </div>
+            
             <div className="slider">
-            {data.map((slide, idx) => (
-                <div
-                key={idx}
-                className={`slide${idx === activeId ? " active" : ""}`}
-                >
-                <div className="slide__info">
-                    <div className="slide__name">{slide.name}</div>
-                    <div className="slide__text">{slide.text}</div>
-                </div>
-                <img src={slide.img} alt={`Slide ${idx + 1}`} />
-                </div>
-            ))}
+                {data.map((slide, idx) => (
+                    <div
+                    key={idx}
+                    className={`slide${idx === activeId ? " active" : ""}`}
+                    >
+                    <div className="slide__info">
+                        <div className="slide__name">{slide.name}</div>
+                        <div className="slide__text">{slide.text}</div>
+                    </div>
+                    <img src={slide.img} alt={`Slide ${idx + 1}`} />
+                    </div>
+                ))}
             </div>
+
+            
+
         </div>
     );
 };
