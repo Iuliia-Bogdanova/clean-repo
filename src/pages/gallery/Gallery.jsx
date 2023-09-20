@@ -70,7 +70,7 @@ console.log (sliderData);
 
 const Gallery = () => {
     return (
-      <main className="main">
+      <main className="main-gallery">
         <div className="container">
           <div className="button-box">
             <div className="title">
