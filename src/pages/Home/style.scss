@@ -27,3 +27,13 @@
 .about-text p {
     padding: 10px 0;
 }
+
+@media (max-width: 768px) {
+    .logo-title {
+        margin: 10px 0;
+        font-size: 40px;
+    }
+    .about-text p {
+        padding: 6px 0;
+    }
+}

@@ -79,3 +79,9 @@ body::-webkit-scrollbar-corner {
     max-width: 1220px;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .App {
+        font-size: 24px;
+    }
+}

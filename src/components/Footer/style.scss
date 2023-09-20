@@ -28,10 +28,19 @@
 }
 
 .social__item {
+    width: 40px;
+    height: 40px;
     transition: all .2s ease-in;
 }
 
 .social__item:hover {
     transform: scale(.9);
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .social__item {
+        width: 30px;
+        height: 30px;
+    }
 }

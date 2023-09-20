@@ -49,3 +49,9 @@
     width: 100%;
     background-color: var(--link-color);
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 40px;
+    }
+}
