@@ -63,7 +63,7 @@ const prev = () => {
             <IconButton
                 direction="right"
                 onClick={next}
-                disable={activeId === data.length}
+                disable={activeId === data.length - 1}
             />
             </div>
             <div className="slider">

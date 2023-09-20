@@ -9,7 +9,7 @@ export const IconButton = ({
 
     if (direction === 'left') cls += ' left';
     if (direction === 'right') cls += ' right';
-    if (disable) cls += ' disable';
+    if (disable) cls += ' disabled';
 
     return ( 
         <div className={cls} onClick={onClick} />
