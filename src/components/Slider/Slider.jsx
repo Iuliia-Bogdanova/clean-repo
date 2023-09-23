@@ -5,22 +5,18 @@ import './style.scss';
 const Slider = ({ data }) => {
     const [activeId, setActiveId] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
-    const [activeIndex, setActiveIndex] = useState(0);
-
+    
 const prev = () => {
     if (activeId > 0) {
-        setActiveId(activeId - 1);
-        setActiveIndex(activeIndex - 1);
+        setActiveId(activeId - 1);      
         } 
     };
 
 const next = () => {
 if (activeId < data.length - 1) {
     setActiveId(activeId + 1);
-    setActiveIndex(activeIndex + 1);
     } else {
         setActiveId(0); 
-        setActiveIndex(0);
     }
 };
 
@@ -41,8 +37,7 @@ useEffect(() => {
     };
 
     const handleIndicatorClick = (index) => {
-    setActiveId(index);
-    setActiveIndex(index);
+        setActiveId(index);
     };
 
     return (
@@ -86,7 +81,7 @@ useEffect(() => {
                 {data.map((slide, idx) => (
                     <Indicator
                     key={idx}
-                    active={idx === activeIndex ? "active" : ""}
+                    active={idx === activeId ? "active" : ""}
                     onClick={handleIndicatorClick}
                     index={idx}
                     />
