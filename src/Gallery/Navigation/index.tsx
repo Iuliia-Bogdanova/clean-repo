@@ -8,6 +8,10 @@ interface NavigationProps extends CommonClassProps {
 }
 
 export const Navigation: React.FC<NavigationProps> = ({
-    activePhotoIndex,
-    photos,
-}) => <div>Navigation</div>;
+    disabledPrev,
+    disabledNext,
+    onPrevClick,
+    onNextClick,
+}) => (
+    <div>Navigation</div>
+);
