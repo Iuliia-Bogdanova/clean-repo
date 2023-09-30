@@ -1,8 +1,9 @@
 .mainPhoto {
     position: relative;
     width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
+    // max-width: 900px;
+    // height: 30vw;
+    margin: 30px auto;
     padding-bottom: 50%;
     background: #9eb1c8;
     border-radius: 5px;
@@ -14,7 +15,7 @@
         left: 0;
         display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         background-position: center;
         z-index: 2;

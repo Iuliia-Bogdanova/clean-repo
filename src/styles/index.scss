@@ -2,16 +2,16 @@
     background: #faf4ed;
     // max-width: 900px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
 
-    &body::-webkit-scrollbar {
-        background: #faf4ed;
-    }
+    // &::-webkit-scrollbar {
+    //     background: #faf4ed;
+    // }
 }
 
-.body::-webkit-scrollbar {
-    background: #faf4ed;
-}
+// .App {
+    
+// }
