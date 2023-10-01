@@ -1,0 +1,45 @@
+.transitionPhoto {
+    position: relative;
+    width: 80%;
+    // max-width: 900px;
+    // height: 30vw;
+    margin: 0 auto 20px;
+    padding-bottom: 50%;
+    background: #a2a4ac;
+    border-radius: 5px;
+    border: .8px solid #cbc4c8;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        width: 90%;        
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;        
+    }
+
+    &Image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+        z-index: 2;
+        // display: none;
+        transition: opacity 1.5s;
+        opacity: 0;
+    }
+
+    &Image[data-active=true] {
+        display: block;
+        opacity: 1;
+        z-index: 3;
+    }
+
+    &Image[data-active=prepard] {
+        display: block;
+    }
+}
+

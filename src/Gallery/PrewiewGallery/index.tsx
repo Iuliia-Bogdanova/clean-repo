@@ -27,8 +27,13 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
             return;
         }
 
-        previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 164}px, 0, 0)`;
-
+        if(window.matchMedia("(max-width: 400px)").matches) {
+            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 100}px, 0, 0)`;
+        } else if(window.matchMedia("(max-width: 600px)").matches) {
+            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 110}px, 0, 0)`;
+        } else {
+            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 164}px, 0, 0)`;
+        }
     }, [ activePhotoIndex ]);
 
     return (

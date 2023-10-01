@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import { MainPhoto } from "./MainPhoto";
+// import { MainPhoto } from "./MainPhoto";
+import { TransitionPhoto } from "./TransitionPhoto";
 import { PreviewGallery } from "./PrewiewGallery";
 import { Navigation } from "./Navigation";
 import { Photo } from "./types";
@@ -26,11 +27,9 @@ export const Gallery: React.FC<GalleryProps> = ({
     return (
         <div className={style.gallery}>
             <div className={style.galleryContainer}>
-                <MainPhoto
-                    prevPhoto={prevPhoto}
-                    activePhoto={activePhoto}
-                    nextPhoto={nextPhoto}
-                    // className={style.mainPhoto}
+                <TransitionPhoto
+                    photos={photos}
+                    indexActivePhoto={indexActivePhoto}
                 />
                 <Navigation
                     className={style.galleryNavigation}
