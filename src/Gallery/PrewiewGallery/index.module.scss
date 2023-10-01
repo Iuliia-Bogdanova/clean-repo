@@ -1,0 +1,45 @@
+.previewGallery {
+    display: inline-block;
+    width: 492px;
+    position: relative;
+    overflow: hidden;
+    
+    &Track {
+        display: flex;
+        position: relative;
+        left: 164px;
+        white-space: nowrap;
+        transition: transform .5s ease-out;
+    }
+
+    &Preview {
+        min-width: 154px;
+        margin: 5px;
+        height: 80px;
+        border-radius: 5px;
+        background: #9eb1c8;
+        overflow: hidden;
+    }
+
+    &Image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &Cover {
+        display: flex;
+        position: absolute;
+        width: 164px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        justify-content: center;
+        align-items: center;
+        font: 24px/1 Georgia;
+        z-index: 2;
+        background: rgba(203, 196, 200, .4);
+    }
+}
