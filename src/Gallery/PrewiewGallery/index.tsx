@@ -9,12 +9,14 @@ import style from './index.module.scss';
 interface PreviewGalleryProps extends CommonClassProps {
     activePhotoIndex: number;
     photos: Photo[];
+    setNewPhoto: (id: number) => void;
 }
 
 export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
     activePhotoIndex,
     photos,
-    className
+    className,
+    setNewPhoto,
 }) => {
     if (!photos.length) {
         return null;
@@ -38,25 +40,28 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
 
     return (
         <div className={cl(style.previewGallery, className)}>
-            {useMemo(() => (
-                <ul
-                    className={cl(style.previewGalleryTrack)}
-                    ref={previewContainer}
-                >
-                    {photos.map((photo) => (
-                        <li
-                            key={photo.id}
-                            className={style.previewGalleryPreview}
-                        >
-                            <img
-                                src={photo.preview}
-                                alt={photo.description}
-                                className={style.previewGalleryImage}
-                            />
-                        </li>
-                    ))}
-                </ul>
-            ), [])}
+            {useMemo(
+                () => (
+                    <ul
+                        className={cl(style.previewGalleryTrack)}
+                        ref={previewContainer}
+                    >
+                        {photos.map((photo, id) => (
+                            <li key={photo.id}>
+                                <button
+                                    className={style.previewGalleryPreview} 
+                                    onClick={() => setNewPhoto(id)}
+                                >
+                                    <img
+                                        src={photo.preview}
+                                        alt={photo.description}
+                                        className={style.previewGalleryImage}
+                                    />
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                ), [])}
 
             <div className={style.previewGalleryCover}>
                 {activePhotoIndex + 1} / {photos.length}

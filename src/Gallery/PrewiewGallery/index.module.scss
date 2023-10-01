@@ -32,9 +32,12 @@
         min-width: 154px;
         margin: 5px;
         height: 80px;
+        padding: 0;
+        border: none;
         border-radius: 5px;
         background: #a2a4ac;
         overflow: hidden;
+        cursor: pointer;
 
         @media (max-width: 600px) {
             min-width: 100px;

@@ -20,7 +20,6 @@ export const Gallery: React.FC<GalleryProps> = ({
     }
 
     const [ indexActivePhoto, setIndexActivePhoto] = useState(0);
-    const activePhoto = photos[indexActivePhoto];
     const prevPhoto = photos[indexActivePhoto - 1];
     const nextPhoto = photos[indexActivePhoto + 1];
 
@@ -47,6 +46,7 @@ export const Gallery: React.FC<GalleryProps> = ({
                 activePhotoIndex={indexActivePhoto}
                 photos={photos}
                 className={style.previewList}
+                setNewPhoto={setIndexActivePhoto}
             />
         </div>
     );
