@@ -8,7 +8,7 @@ import style from './index.module.scss';
 
 interface PreviewGalleryProps extends CommonClassProps {
     activePhotoIndex: number;
-    photo: Photo[];
+    photos: Photo[];
 }
 
 export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
