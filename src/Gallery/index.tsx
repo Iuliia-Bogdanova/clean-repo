@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import { MainPhoto } from "./MainPhoto";
 import { TransitionPhoto } from "./TransitionPhoto";
@@ -22,6 +22,20 @@ export const Gallery: React.FC<GalleryProps> = ({
     const [ indexActivePhoto, setIndexActivePhoto] = useState(0);
     const prevPhoto = photos[indexActivePhoto - 1];
     const nextPhoto = photos[indexActivePhoto + 1];
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (indexActivePhoto === photos.length - 1) {
+                setIndexActivePhoto(0);
+            } else {
+                setIndexActivePhoto(indexActivePhoto + 1);
+            }
+        }, 5000);
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [indexActivePhoto, photos.length]);
 
     return (
         <div className={style.gallery}>
