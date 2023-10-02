@@ -47,15 +47,6 @@
         @media (max-width: 400px) {
             min-width: 90px;
         }
-
-        @media (max-width: 330px) {
-            &:first-child {
-                margin-left: 0;
-            }
-            &:last-child {
-                margin-right: 0;
-            }
-        }
     }
 
     &Image {

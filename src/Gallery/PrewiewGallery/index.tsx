@@ -25,18 +25,29 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
     const previewContainer = useRef<HTMLUListElement>(null);
 
     useEffect(() => {
-        if(!previewContainer.current) {
+        if (!previewContainer.current) {
             return;
         }
 
-        if(window.matchMedia("(max-width: 400px)").matches) {
-            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 100}px, 0, 0)`;
-        } else if(window.matchMedia("(max-width: 600px)").matches) {
-            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 110}px, 0, 0)`;
-        } else {
-            previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 164}px, 0, 0)`;
-        }
-    }, [ activePhotoIndex ]);
+        // условия с тернарным оператором
+        const maxWidth400px = window.matchMedia("(max-width: 400px)").matches;
+        const maxWidth600px = window.matchMedia("(max-width: 600px)").matches;
+
+        previewContainer.current.style.transform = maxWidth400px
+            ? `translate3d(-${activePhotoIndex * 100}px, 0, 0)`
+            : maxWidth600px
+            ? `translate3d(-${activePhotoIndex * 110}px, 0, 0)`
+            : `translate3d(-${activePhotoIndex * 164}px, 0, 0)`;
+    }, [activePhotoIndex]);
+
+    //     if(window.matchMedia("(max-width: 400px)").matches) {
+    //         previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 100}px, 0, 0)`;
+    //     } else if(window.matchMedia("(max-width: 600px)").matches) {
+    //         previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 110}px, 0, 0)`;
+    //     } else {
+    //         previewContainer.current.style.transform = `translate3d(-${activePhotoIndex * 164}px, 0, 0)`;
+    //     }
+    // }, [ activePhotoIndex ]);
 
     return (
         <div className={cl(style.previewGallery, className)}>
